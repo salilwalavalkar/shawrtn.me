@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+
+  mongodb:
+    image: mongo:3.2.4
+    container_name: "mongodb"
+    ports:
+      - 27017:27017
+    command: --smallfiles
+
+  redis:
+    image: redis
+    container_name: "redis"
+    ports:
+      - 6379:6379
+
+  app:
+    image: salil/shawrtn-me
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb/shawrtn-me
+      SPRING_APPLICATION_NAME: shawrtn-me
+    links:
+      - mongodb
+      - redis
