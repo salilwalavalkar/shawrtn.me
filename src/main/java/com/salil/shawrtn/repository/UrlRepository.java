@@ -15,6 +15,6 @@ public interface UrlRepository extends MongoRepository<UrlDO, String> {
 
     UrlDO findByLongUrl(String url);
 
-    @CachePut(value = UrlCacheConfig.CACHE_SHAWRTN_ME, key = "#url.keyCode")
+    @CachePut(value = UrlCacheConfig.CACHE_SHAWRTN_ME, key = "#url.key")
     UrlDO save(UrlDO url);
 }

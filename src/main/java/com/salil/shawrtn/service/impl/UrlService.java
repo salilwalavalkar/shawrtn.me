@@ -24,7 +24,7 @@ import java.util.*;
 
 import static com.salil.shawrtn.util.Base62.fromBase10;
 import static com.salil.shawrtn.util.Base62.toBase10;
-import static com.salil.shawrtn.util.UrlUtility.isUrlValid;
+import static com.salil.shawrtn.util.UrlValidator.isUrlValid;
 import static org.springframework.util.StringUtils.isEmpty;
 
 @Service
