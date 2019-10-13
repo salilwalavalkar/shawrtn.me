@@ -17,6 +17,7 @@ services:
 
   app:
     image: salil/shawrtn-me
+    container_name: "shawrtn-me"
     ports:
       - 8080:8080
     environment:
