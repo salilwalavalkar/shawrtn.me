@@ -51,3 +51,10 @@ GET /api/v1/KEY
 curl -v -X GET http://localhost:8080/api/v1/b
 ```
 
+### Swagger UI
+
+```
+http://localhost:8080/swagger-ui.html
+```
+
+![alt text](docs/screenshot.png "Screenshot")
